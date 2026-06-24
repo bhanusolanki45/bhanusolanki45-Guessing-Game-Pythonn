@@ -2,7 +2,7 @@ import streamlit as st
 import random
 
 if "secret_number" not in st.session_state:
-    st.session_state.secret_number = random.randint(1, 110)
+    st.session_state.secret_number = random.randint(1, 50)
 
 if "attempts" not in st.session_state:
     st.session_state.attempts = 0
@@ -10,9 +10,9 @@ if "attempts" not in st.session_state:
 st.title("🎯 Number Guessing Game")
 
 guess = st.number_input(
-    "Guess a number between 1 and 110",
+    "Guess a number between 1 and 50",
     min_value=1,
-    max_value=110,
+    max_value=50,
     step=1
 )
 
@@ -30,5 +30,5 @@ if st.button("Submit Guess"):
             f"🎉 Correct! You found it in {st.session_state.attempts} attempts."
         )
 
-        st.session_state.secret_number = random.randint(1, 110)
+        st.session_state.secret_number = random.randint(1, 50)
         st.session_state.attempts = 0
