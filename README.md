@@ -8,7 +8,7 @@
 
 This is a simple Python-based Number Guessing Game.
 
-The program generates a random number between 1 and 110, and the player tries to guess the correct number.
+The program generates a random number between 1 and 50, and the player tries to guess the correct number.
 
 The game provides hints:
 
